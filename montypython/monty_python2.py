@@ -2,7 +2,7 @@
 round = 0
 answer = " "
 
-while round < 3 and (answer.capitalize() != "Brian" and answer != "Shrubbery"):
+while round < 3 and (answer.capitalize() != "Brian" and answer.capitalize() != "Shrubbery"):
     round += 1     # increase the round counter by 1
     answer = input('Finish the movie title, "Monty Python\'s The Life of ______": ')
     if answer.capitalize() == "Brian": # logic to check if user gave correct answer
