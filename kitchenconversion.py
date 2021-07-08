@@ -3,7 +3,7 @@
 
 #Welcome statement, always run
 
-print("Kitchen conversions made easy!\nI can handle tsp, tbsp, cups, pints, quarts, gallons, floz, ml")
+print("Kitchen conversions made easy!\n\nI can handle tsp, tbsp, cups, pints, quarts, gallons, floz, ml")
 
 #create conversion table in nested dictionary
 
@@ -18,15 +18,21 @@ conversions = { 'tsp': {'tbsp': 1.0/3.0 , 'cups': 1.0/40.0 , 'pints': 1.0/96.0 ,
                 }
 
 
+
 #main function
 def main():
     #attempt to make continuous loop
     #create function variables through user input
 
-        key = input("What measurement do you have?")
-        howmuch = float(input("How much do you have?"))
-        value = input("What measurement do you want?")
+    key = input("What measurement do you have?")
+    howmuch = float(input("How much do you have?"))
+    value = input("What measurement do you want?")
 
+        #check if the values are the same
+    if key == value:
+        print("These are the same measures, did you make a mistake?")
+    #if the values are not the same, continue with conversion
+    else:
         #use user inputs to pull conversion values from the dictionary
         result = howmuch * (conversions[key][value])
 
@@ -37,7 +43,6 @@ def main():
         #contcheck = input("Would you like to do another? Y/N \n")
 
         #thank the user for use upon exit
-        print("Thank you for using my conversion table!")
-
+    print("Thank you for using my conversion table!")
 
 main()
